@@ -29,6 +29,8 @@ const Portfolio = () => {
             <motion.img variants={fadeIn("up", "tween", .5, .6)} src="./showCase1.png" alt="project" />
             <motion.img variants={fadeIn("up", "tween", .7, .6)} src="./showCase2.png" alt="project" />
             <motion.img variants={fadeIn("up", "tween", .9, .6)} src="./showCase3.png" alt="project" />
+            <motion.img variants={fadeIn("up", "tween", .9, .6)} src="./showCase4.jpg" alt="project" />
+            <motion.img variants={fadeIn("up", "tween", .9, .6)} src="./showCase5.jpg" alt="project" />
         </div>
       </div>
     </motion.section>

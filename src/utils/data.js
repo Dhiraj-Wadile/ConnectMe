@@ -24,6 +24,14 @@ export const WhatDoIHelp = [
 
 export const workExp = [
   {
+    place: "BitSolve Technologies Pvt Ltd", 
+    tenure: "Jan 2024 - April 2024",
+    role: "Software Developer Intern",
+    detail:
+      " Developed and integrated automated allocation systems using Python and JavaScript frameworks, reducing manual effort by 70% and increasing allocation accuracy by 80%",
+  },
+
+  {
     place: "Brainwave Learining Library", 
     tenure: "Jan 2024 - Mar 2024",
     role: "Frontend Developer",

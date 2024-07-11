@@ -38,7 +38,7 @@ const Hero = () => {
 
         <div className={css.lowerElements}>
           <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
-            <div className="primaryText">7</div>
+            <div className="primaryText">10</div>
             <div className="secondaryText">
               <div>Months</div>
               <div>Experience</div>
