@@ -31,10 +31,6 @@ const Footer = () => {
             <p>Pune, Maharashtra</p>
           </div>
           <ul className={css.menu}>
-          <li>Services</li>
-<li>Works</li>
-<li>Notes</li>
-<li>Experience</li>
 <li>&copy; 2024 Dhiraj Wadile</li>
           </ul>
         </div>
