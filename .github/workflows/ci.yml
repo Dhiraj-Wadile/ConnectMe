@@ -32,9 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: amondnet/vercel-action@v25
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      - uses: vercel/action@v1
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
