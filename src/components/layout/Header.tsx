@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, FileDown } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -53,12 +54,12 @@ export function Header() {
       )}
     >
       <div className="container flex h-16 items-center justify-between">
-        <a
+        <Link
           href="/"
           className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
           DW<span className="text-accent">.</span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-1">
           {navigation.map((item) => (
