@@ -54,7 +54,7 @@ export function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         <a
-          href="#"
+          href="/"
           className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
           DW<span className="text-accent">.</span>

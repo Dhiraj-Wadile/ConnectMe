@@ -1,12 +1,18 @@
 "use client"
 
 import { personalInfo } from "@/data/resume"
-import { Mail, Phone, MapPin, Globe, GitBranch, FileText } from "lucide-react"
+import { Mail, Phone, MapPin, Globe, GitBranch, FileText, ArrowLeft } from "lucide-react"
 
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-white text-black print:bg-white">
       <div className="max-w-4xl mx-auto px-6 py-12 print:px-0 print:py-0">
+        <div className="mb-6 no-print">
+          <a href="/" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors">
+            <ArrowLeft className="h-4 w-4" />
+            Back to Portfolio
+          </a>
+        </div>
         <div className="flex items-start justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold">{personalInfo.name}</h1>
@@ -163,7 +169,7 @@ export default function ResumePage() {
           </ul>
         </div>
 
-        <div className="mb-8">
+        <div id="skills" className="mb-8">
           <h2 className="text-lg font-bold mb-3 pb-1 border-b-2 border-black">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {["Java", "Spring Boot", "Kafka", "gRPC", "PostgreSQL", "Docker", "Kubernetes",
