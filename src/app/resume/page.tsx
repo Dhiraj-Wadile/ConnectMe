@@ -33,7 +33,7 @@ export default function ResumePage() {
             <MapPin className="h-4 w-4" /> {personalInfo.location}
           </span>
           <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:underline">
-            <Github className="h-4 w-4" /> Dhiraj-Wadile
+            <GitBranch className="h-4 w-4" /> Dhiraj-Wadile
           </a>
           <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:underline">
             <Globe className="h-4 w-4" /> dhiraj-wadile
