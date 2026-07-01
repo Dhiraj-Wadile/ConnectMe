@@ -8,6 +8,7 @@ import { ScrollProgress } from "@/components/shared/ScrollProgress"
 import { MouseGlow } from "@/components/shared/MouseGlow"
 import { ScrollToTop } from "@/components/shared/ScrollToTop"
 import { ParticleBackground } from "@/components/shared/ParticleBackground"
+import { ErrorBoundary } from "@/components/shared/ErrorBoundary"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -116,7 +117,9 @@ export default function RootLayout({
           <ScrollToTop />
           <ParticleBackground />
           <Header />
-          <main className="flex-1 relative z-[1]">{children}</main>
+          <ErrorBoundary>
+            <main className="flex-1 relative z-[1]">{children}</main>
+          </ErrorBoundary>
           <Footer />
         </ThemeProvider>
       </body>

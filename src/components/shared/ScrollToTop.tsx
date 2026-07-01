@@ -23,6 +23,7 @@ export function ScrollToTop() {
     <AnimatePresence>
       {visible && (
         <motion.button
+          key="scroll-to-top"
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}

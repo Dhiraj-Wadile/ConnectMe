@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, FileDown } from "lucide-react"
@@ -41,6 +41,8 @@ export function Header() {
     return () => { document.body.style.overflow = "" }
   }, [isMobileOpen])
 
+  const closeMobile = useCallback(() => setIsMobileOpen(false), [])
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -63,7 +65,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-1">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className={cn(
@@ -74,7 +76,7 @@ export function Header() {
               )}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -86,10 +88,10 @@ export function Header() {
             className="hidden sm:inline-flex gap-2"
             asChild
           >
-            <a href={personalInfo.resumeUrl}>
+            <Link href={personalInfo.resumeUrl}>
               <FileDown className="h-3.5 w-3.5" />
               Resume
-            </a>
+            </Link>
           </Button>
           <button
             className="flex md:hidden h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-muted/10 transition-colors"
@@ -108,6 +110,7 @@ export function Header() {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
+            key="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -116,23 +119,24 @@ export function Header() {
           >
             <nav className="container py-4 flex flex-col gap-1">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsMobileOpen(false)}
+                  onClick={closeMobile}
                   className="px-3 py-2.5 text-sm rounded-lg hover:bg-muted/10 transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="my-2 border-t border-border" />
-              <a
+              <Link
                 href={personalInfo.resumeUrl}
+                onClick={closeMobile}
                 className="px-3 py-2.5 text-sm rounded-lg hover:bg-muted/10 transition-colors flex items-center gap-2"
               >
                 <FileDown className="h-3.5 w-3.5" />
                 View Resume
-              </a>
+              </Link>
             </nav>
           </motion.div>
         )}

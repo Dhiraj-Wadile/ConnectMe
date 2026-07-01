@@ -94,14 +94,14 @@ function ProjectCard({
               />
             </button>
 
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
               {isExpanded && (
                 <motion.div
+                  key="expanded-details"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden"
                 >
                   <div className="pt-6 space-y-6">
                     <div>

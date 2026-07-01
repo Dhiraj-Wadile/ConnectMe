@@ -1,10 +1,10 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { FileDown, Mail, Code2, Globe, Sparkles } from "lucide-react"
 import { personalInfo } from "@/data/resume"
 import { Button } from "@/components/ui/button"
-import { MagneticButton } from "@/components/shared/MagneticButton"
 import { useEffect, useState } from "react"
 
 function TypeWriter({ text, delay = 0 }: { text: string; delay?: number }) {
@@ -140,36 +140,28 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <MagneticButton>
-              <Button size="lg" className="gap-2 group" asChild>
-                <a href={personalInfo.resumeUrl}>
-                  <FileDown className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
-                  View Resume
-                </a>
-              </Button>
-            </MagneticButton>
-            <MagneticButton>
-              <Button variant="outline" size="lg" className="gap-2 group" asChild>
-                <a href={`mailto:${personalInfo.email}`}>
-                  <Mail className="h-4 w-4 transition-transform group-hover:scale-110" />
-                  Contact Me
-                </a>
-              </Button>
-            </MagneticButton>
-            <MagneticButton>
-              <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
-                <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Code2 className="h-5 w-5" />
-                </a>
-              </Button>
-            </MagneticButton>
-            <MagneticButton>
-              <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
-                <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Globe className="h-5 w-5" />
-                </a>
-              </Button>
-            </MagneticButton>
+            <Button size="lg" className="gap-2 group" asChild>
+              <Link href={personalInfo.resumeUrl}>
+                <FileDown className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
+                View Resume
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="gap-2 group" asChild>
+              <a href={`mailto:${personalInfo.email}`}>
+                <Mail className="h-4 w-4 transition-transform group-hover:scale-110" />
+                Contact Me
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
+              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Code2 className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
+              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Globe className="h-5 w-5" />
+              </a>
+            </Button>
           </motion.div>
 
           <motion.div
