@@ -30,7 +30,7 @@ const blogPosts = [
 
 export function Blog() {
   return (
-    <section id="blog" className="section-padding bg-muted/5">
+    <section id="blog" className="section-padding scroll-mt-20 bg-muted/5">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>

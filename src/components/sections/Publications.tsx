@@ -7,7 +7,7 @@ import { AnimatedContent, StaggerChildren, StaggerItem } from "@/components/shar
 
 export function Publications() {
   return (
-    <section id="publications" className="section-padding bg-muted/5">
+    <section id="publications" className="section-padding scroll-mt-20 bg-muted/5">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>

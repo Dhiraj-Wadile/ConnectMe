@@ -68,7 +68,7 @@ const services: {
 
 export function Freelance() {
   return (
-    <section id="freelance" className="section-padding">
+    <section id="freelance" className="section-padding scroll-mt-20">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>
@@ -100,7 +100,7 @@ export function Freelance() {
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10">
-                        <Icon className="h-4.5 w-4.5 text-accent" />
+                        <Icon className="h-5 w-5 text-accent" />
                       </div>
                       <div>
                         <h3 className="text-sm font-semibold">{service.title}</h3>

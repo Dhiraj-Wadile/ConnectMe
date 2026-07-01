@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dhirajwadile.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dhirajwadile.dev"),
   title: {
     default: "Dhiraj Wadile | Software Engineer — Building Scalable Payment Systems & AI Solutions",
     template: "%s | Dhiraj Wadile",
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
       "Building production-grade payment systems, AI agents, and distributed architectures. Software Engineer @ ACI Worldwide.",
     images: [
       {
-        url: "/images/og.png",
-        width: 1200,
-        height: 630,
+        url: "/images/profile.png",
+        width: 512,
+        height: 512,
         alt: "Dhiraj Wadile",
       },
     ],
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Dhiraj Wadile | Software Engineer",
     description:
       "Building production-grade payment systems, AI agents, and distributed architectures.",
-    images: ["/images/og.png"],
+    images: ["/images/profile.png"],
   },
   robots: {
     index: true,

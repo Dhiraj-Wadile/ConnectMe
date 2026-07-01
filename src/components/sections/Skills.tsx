@@ -29,7 +29,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="section-padding relative overflow-hidden">
+    <section id="skills" className="section-padding scroll-mt-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute right-0 top-1/2 w-72 h-72 bg-accent/3 rounded-full blur-3xl" />
       </div>
@@ -56,7 +56,7 @@ export function Skills() {
                   <TiltCard>
                     <motion.div
                       whileHover={{ y: -4 }}
-                      className="p-5 rounded-xl border border-border bg-card hover:border-accent/20 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+                      className="group p-5 rounded-xl border border-border bg-card hover:border-accent/20 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3 mb-3">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 group-hover:bg-accent/20 transition-colors">

@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function Leadership() {
   return (
-    <section id="leadership" className="section-padding">
+    <section id="leadership" className="section-padding scroll-mt-20">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>

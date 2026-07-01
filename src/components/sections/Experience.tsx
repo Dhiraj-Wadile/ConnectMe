@@ -8,7 +8,7 @@ import { Building2, ArrowRight } from "lucide-react"
 
 export function Experience() {
   return (
-    <section id="experience" className="section-padding relative overflow-hidden">
+    <section id="experience" className="section-padding scroll-mt-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/3 top-0 w-px h-full bg-gradient-to-b from-accent/0 via-accent/5 to-accent/0" />
       </div>

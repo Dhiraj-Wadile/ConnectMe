@@ -1,11 +1,11 @@
 "use client"
 
 import { personalInfo } from "@/data/resume"
-import { AnimatedSection, AnimatedContent } from "@/components/shared/AnimatedSection"
+import { AnimatedContent } from "@/components/shared/AnimatedSection"
 
 export function About() {
   return (
-    <AnimatedSection id="about">
+    <section id="about" className="section-padding scroll-mt-20">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>
@@ -49,6 +49,6 @@ export function About() {
           </AnimatedContent>
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   )
 }

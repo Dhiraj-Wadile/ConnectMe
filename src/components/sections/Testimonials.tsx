@@ -8,7 +8,7 @@ import { TiltCard } from "@/components/shared/TiltCard"
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="section-padding bg-muted/5">
+    <section id="testimonials" className="section-padding scroll-mt-20 bg-muted/5">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>

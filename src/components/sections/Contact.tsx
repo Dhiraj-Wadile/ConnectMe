@@ -13,16 +13,17 @@ export function Contact() {
     e.preventDefault()
     const form = e.target as HTMLFormElement
     const formData = new FormData(form)
-    const name = formData.get("name")
-    const message = formData.get("message")
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const message = formData.get("message") as string
 
-    window.location.href = `mailto:${personalInfo.email}?subject=Contact from ${name}&body=${message}`
+    window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent("Contact from " + name)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 3000)
   }
 
   return (
-    <section id="contact" className="section-padding relative overflow-hidden">
+    <section id="contact" className="section-padding scroll-mt-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/3 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/3 rounded-full blur-3xl" />

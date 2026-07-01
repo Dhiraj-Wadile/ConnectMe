@@ -31,7 +31,7 @@ export function AnimatedSection({
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={cn("section-padding", className)}
+      className={cn("section-padding scroll-mt-20", className)}
     >
       {children}
     </motion.section>
