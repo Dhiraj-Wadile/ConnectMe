@@ -1,3 +1,5 @@
+"use client"
+
 import { personalInfo } from "@/data/resume"
 import { Mail, Phone, MapPin, Globe, GitBranch, FileText } from "lucide-react"
 
