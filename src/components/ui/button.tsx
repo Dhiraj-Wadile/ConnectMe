@@ -6,29 +6,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-foreground text-background hover:opacity-90",
+          "bg-foreground text-background hover:opacity-90 hover:shadow-lg hover:shadow-foreground/10 active:scale-[0.98]",
         destructive:
-          "bg-red-500 text-white hover:bg-red-600",
+          "bg-red-500 text-white hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/20 active:scale-[0.98]",
         outline:
-          "border border-border bg-transparent hover:bg-muted/10",
+          "border border-border bg-transparent hover:bg-muted/10 hover:border-accent/30 hover:shadow-sm active:scale-[0.98]",
         secondary:
-          "bg-muted/10 text-foreground hover:bg-muted/20",
+          "bg-muted/10 text-foreground hover:bg-muted/20 active:scale-[0.98]",
         ghost:
-          "hover:bg-muted/10 hover:text-foreground",
+          "hover:bg-muted/10 hover:text-foreground active:scale-[0.98]",
         link:
           "text-accent underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-10 px-5 py-2",
-        sm: "h-8 px-3 text-xs",
-        lg: "h-12 px-8 text-base",
-        xl: "h-14 px-10 text-lg",
-        icon: "h-10 w-10",
+        default: "h-10 px-5 py-2 rounded-lg",
+        sm: "h-8 px-3 text-xs rounded-lg",
+        lg: "h-12 px-8 text-base rounded-xl",
+        xl: "h-14 px-10 text-lg rounded-xl",
+        icon: "h-10 w-10 rounded-full",
       },
     },
     defaultVariants: {

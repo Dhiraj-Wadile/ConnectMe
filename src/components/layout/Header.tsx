@@ -85,7 +85,7 @@ export function Header() {
             className="hidden sm:inline-flex gap-2"
             asChild
           >
-            <a href={personalInfo.resumeUrl} download>
+            <a href={personalInfo.resumeUrl}>
               <FileDown className="h-3.5 w-3.5" />
               Resume
             </a>
@@ -127,11 +127,10 @@ export function Header() {
               <div className="my-2 border-t border-border" />
               <a
                 href={personalInfo.resumeUrl}
-                download
                 className="px-3 py-2.5 text-sm rounded-lg hover:bg-muted/10 transition-colors flex items-center gap-2"
               >
                 <FileDown className="h-3.5 w-3.5" />
-                Download Resume
+                View Resume
               </a>
             </nav>
           </motion.div>

@@ -4,11 +4,15 @@ import { motion } from "framer-motion"
 import { experience } from "@/data/resume"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedContent, StaggerChildren, StaggerItem } from "@/components/shared/AnimatedSection"
-import { Building2 } from "lucide-react"
+import { Building2, ArrowRight } from "lucide-react"
 
 export function Experience() {
   return (
-    <section id="experience" className="section-padding">
+    <section id="experience" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute left-1/3 top-0 w-px h-full bg-gradient-to-b from-accent/0 via-accent/5 to-accent/0" />
+      </div>
+
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <AnimatedContent>
@@ -35,8 +39,17 @@ export function Experience() {
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.1 }}
-                      className="absolute left-3 top-1.5 h-3 w-3 rounded-full bg-accent ring-4 ring-background shadow-lg shadow-accent/20"
-                    />
+                      className="absolute left-3 top-1.5"
+                    >
+                      <div className="relative h-3 w-3">
+                        <motion.div
+                          className="absolute inset-0 rounded-full bg-accent"
+                          animate={{ scale: [1, 1.5, 1] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                        <div className="absolute inset-0 rounded-full bg-accent/30 blur-sm" />
+                      </div>
+                    </motion.div>
 
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
                       <div>
@@ -57,9 +70,9 @@ export function Experience() {
                       {exp.highlights.map((highlight, j) => (
                         <li
                           key={j}
-                          className="text-sm text-muted-foreground leading-relaxed pl-4 relative"
+                          className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2 group"
                         >
-                          <span className="absolute left-0 top-2.5 h-1 w-1 rounded-full bg-muted-foreground/40" />
+                          <ArrowRight className="h-3.5 w-3.5 text-accent/60 mt-0.5 shrink-0 transition-transform group-hover:translate-x-0.5" />
                           {highlight}
                         </li>
                       ))}

@@ -5,7 +5,8 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { ScrollProgress } from "@/components/shared/ScrollProgress"
-import { CustomCursor } from "@/components/shared/CustomCursor"
+import { MouseGlow } from "@/components/shared/MouseGlow"
+import { ScrollToTop } from "@/components/shared/ScrollToTop"
 import { ParticleBackground } from "@/components/shared/ParticleBackground"
 
 const geistSans = Geist({
@@ -78,10 +79,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest",
 }
 
 export default function RootLayout({
@@ -114,7 +112,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
           <ScrollProgress />
-          <CustomCursor />
+          <MouseGlow />
+          <ScrollToTop />
           <ParticleBackground />
           <Header />
           <main className="flex-1 relative z-[1]">{children}</main>
