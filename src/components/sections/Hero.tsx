@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { FileDown, Mail, Code2, Globe } from "lucide-react"
+import { Mail, Code2, Globe } from "lucide-react"
 import { personalInfo } from "@/data/resume"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState, useRef } from "react"
@@ -140,12 +140,6 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
-            <Button size="lg" className="gap-2 group shadow-lg shadow-accent/20" asChild>
-              <Link href={personalInfo.resumeUrl}>
-                <FileDown className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
-                View Resume
-              </Link>
-            </Button>
             <Button variant="outline" size="lg" className="gap-2 group" asChild>
               <a href={`mailto:${personalInfo.email}`}>
                 <Mail className="h-4 w-4 transition-transform group-hover:scale-110" />

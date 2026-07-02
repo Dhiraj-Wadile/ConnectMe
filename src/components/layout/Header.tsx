@@ -3,12 +3,10 @@
 import { useState, useEffect, useCallback, useRef } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, FileDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { navigation } from "@/data/navigation"
-import { personalInfo } from "@/data/resume"
 import { ThemeToggle } from "@/components/shared/ThemeToggle"
-import { Button } from "@/components/ui/button"
 
 const menuItemVariants = {
   hidden: { opacity: 0, x: -16 },
@@ -113,12 +111,6 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex gap-2" asChild>
-            <Link href={personalInfo.resumeUrl}>
-              <FileDown className="h-3.5 w-3.5" />
-              Resume
-            </Link>
-          </Button>
           <button
             className="flex md:hidden h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-muted/10 transition-colors relative"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -168,23 +160,6 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                custom={navigation.length}
-                variants={menuItemVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="mt-2 border-t border-border pt-2"
-              >
-                <Link
-                  href={personalInfo.resumeUrl}
-                  onClick={closeMobile}
-                  className="flex px-3 py-2.5 text-sm rounded-lg hover:bg-muted/10 transition-colors items-center gap-2"
-                >
-                  <FileDown className="h-3.5 w-3.5" />
-                  View Resume
-                </Link>
-              </motion.div>
             </nav>
           </motion.div>
         )}
