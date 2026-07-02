@@ -5,23 +5,27 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { ScrollProgress } from "@/components/shared/ScrollProgress"
-import { MouseGlow } from "@/components/shared/MouseGlow"
 import { ScrollToTop } from "@/components/shared/ScrollToTop"
-import { ParticleBackground } from "@/components/shared/ParticleBackground"
 import { ErrorBoundary } from "@/components/shared/ErrorBoundary"
+import { PersonJsonLd, WebSiteJsonLd } from "@/components/shared/JsonLd"
+import { ClientEffects } from "@/components/shared/ClientEffects"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 })
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dhirajwadile.dev"
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dhirajwadile.dev"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Dhiraj Wadile | Software Engineer — Distributed Systems, AI & Backend Engineering",
     template: "%s | Dhiraj Wadile",
@@ -45,20 +49,22 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dhiraj Wadile" }],
   creator: "Dhiraj Wadile",
+  publisher: "Dhiraj Wadile",
+  alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://dhirajwadile.dev",
+    url: siteUrl,
     siteName: "Dhiraj Wadile",
     title: "Dhiraj Wadile | Software Engineer — Distributed Systems & AI",
     description:
       "Building production-grade distributed systems, event-driven architectures, and AI agents. Java, Spring Boot, Kafka, Kubernetes.",
     images: [
       {
-        url: "/images/profile.png",
-        width: 512,
-        height: 512,
-        alt: "Dhiraj Wadile",
+        url: `${siteUrl}/images/og.png`,
+        width: 1200,
+        height: 630,
+        alt: "Dhiraj Wadile — Software Engineer",
       },
     ],
   },
@@ -67,7 +73,7 @@ export const metadata: Metadata = {
     title: "Dhiraj Wadile | Software Engineer",
     description:
       "Building production-grade distributed systems, event-driven architectures, and AI agents.",
-    images: ["/images/profile.png"],
+    images: [`${siteUrl}/images/og.png`],
   },
   robots: {
     index: true,
@@ -81,7 +87,17 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: { url: "/images/profile.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Dhiraj Wadile",
   },
 }
 
@@ -97,17 +113,20 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <PersonJsonLd />
+        <WebSiteJsonLd />
         <a href="#main-content" className="skip-link" aria-label="Skip to main content">
           Skip to main content
         </a>
         <ThemeProvider>
           <ScrollProgress />
-          <MouseGlow />
+          <ClientEffects />
           <ScrollToTop />
-          <ParticleBackground />
           <Header />
           <ErrorBoundary>
-            <main id="main-content" className="flex-1 relative z-[1] outline-none" tabIndex={-1}>{children}</main>
+            <main id="main-content" className="flex-1 relative z-[1] outline-none" tabIndex={-1}>
+              {children}
+            </main>
           </ErrorBoundary>
           <Footer />
         </ThemeProvider>

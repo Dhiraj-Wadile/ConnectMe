@@ -77,6 +77,107 @@ export function StaggerChildren({
   )
 }
 
+export function FadeInView({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className={cn(className)}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export function AnimatedSection({
+  children,
+  className,
+  id,
+  delay = 0,
+}: {
+  children: React.ReactNode
+  className?: string
+  id?: string
+  delay?: number
+}) {
+  return (
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{
+        duration: 0.6,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className={cn("section-padding scroll-mt-20", className)}
+    >
+      {children}
+    </motion.section>
+  )
+}
+
+export function AnimatedContent({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: React.ReactNode
+  className?: string
+  delay?: number
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{
+        duration: 0.5,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export function ScaleInView({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: React.ReactNode
+  className?: string
+  delay?: number
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{
+        duration: 0.5,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className={cn(className)}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export function StaggerItem({
   children,
   className,

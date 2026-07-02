@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
 import { Mail, Code2, Globe } from "lucide-react"
 import { personalInfo } from "@/data/resume"
