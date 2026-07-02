@@ -14,7 +14,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-2">
             <a href="#" className="text-lg font-semibold tracking-tight">
-              DW<span className="text-accent">.</span>
+              DMW<span className="text-accent">.</span>
             </a>
             <p className="text-sm text-muted-foreground text-center md:text-left">
               Building scalable backend systems, distributed applications, and AI-powered solutions.

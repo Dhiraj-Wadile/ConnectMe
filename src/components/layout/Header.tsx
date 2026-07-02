@@ -61,7 +61,7 @@ export function Header() {
           href="/"
           className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
-          Dhiraj<span className="text-accent">.</span>
+          DMW<span className="text-accent">.</span>
         </Link>
 
         <nav ref={navRef} className="hidden md:flex items-center gap-1 relative">
