@@ -23,11 +23,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dhirajwadile.dev"),
   title: {
-    default: "Dhiraj Wadile | Software Engineer — Building Scalable Payment Systems & AI Solutions",
+    default: "Dhiraj Wadile | Software Engineer — Distributed Systems, AI & Backend Engineering",
     template: "%s | Dhiraj Wadile",
   },
   description:
-    "Software Engineer @ ACI Worldwide. Building production-grade payment systems, AI agents, and distributed architectures. Java, Spring Boot, AI, event-driven systems.",
+    "Backend engineer building production-grade distributed systems, event-driven architectures, and AI agents. Java, Spring Boot, Kafka, Kubernetes. ACI Worldwide.",
   keywords: [
     "Dhiraj Wadile",
     "Software Engineer",
@@ -35,11 +35,13 @@ export const metadata: Metadata = {
     "Java",
     "Spring Boot",
     "AI Engineer",
-    "Payment Systems",
     "Distributed Systems",
     "Microservices",
-    "ACI Worldwide",
+    "Kafka",
+    "Kubernetes",
+    "FinTech",
     "PICT Pune",
+    "System Design",
   ],
   authors: [{ name: "Dhiraj Wadile" }],
   creator: "Dhiraj Wadile",
@@ -48,9 +50,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://dhirajwadile.dev",
     siteName: "Dhiraj Wadile",
-    title: "Dhiraj Wadile | Software Engineer",
+    title: "Dhiraj Wadile | Software Engineer — Distributed Systems & AI",
     description:
-      "Building production-grade payment systems, AI agents, and distributed architectures. Software Engineer @ ACI Worldwide.",
+      "Building production-grade distributed systems, event-driven architectures, and AI agents. Java, Spring Boot, Kafka, Kubernetes.",
     images: [
       {
         url: "/images/profile.png",
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dhiraj Wadile | Software Engineer",
     description:
-      "Building production-grade payment systems, AI agents, and distributed architectures.",
+      "Building production-grade distributed systems, event-driven architectures, and AI agents.",
     images: ["/images/profile.png"],
   },
   robots: {
@@ -111,6 +113,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <a href="#main-content" className="skip-link" aria-label="Skip to main content">
+          Skip to main content
+        </a>
         <ThemeProvider>
           <ScrollProgress />
           <MouseGlow />
@@ -118,7 +123,7 @@ export default function RootLayout({
           <ParticleBackground />
           <Header />
           <ErrorBoundary>
-            <main className="flex-1 relative z-[1]">{children}</main>
+            <main id="main-content" className="flex-1 relative z-[1] outline-none" tabIndex={-1}>{children}</main>
           </ErrorBoundary>
           <Footer />
         </ThemeProvider>

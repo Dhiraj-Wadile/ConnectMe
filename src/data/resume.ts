@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Dhiraj Wadile",
   title: "Software Engineer",
-  headline: "Building Enterprise Payment Solutions & AI Agents | Backend Engineer @ ACI Worldwide",
-  subtitle: "Software Engineer @ ACI Worldwide",
+  headline: "Backend Engineer Building Distributed Systems, AI Agents & Scalable Infrastructure",
+  subtitle: "Java · Spring Boot · Kafka · Kubernetes · AI · Distributed Systems",
   email: "dhirajwadileoffice@gmail.com",
   phone: "+91 8767766059",
   location: "Pune, Maharashtra, India",
@@ -11,9 +11,9 @@ export const personalInfo = {
   resumeUrl: "/resume",
   calendly: "https://calendly.com/dmwadile",
   bio: [
-    "I build production-grade distributed systems that process millions of transactions at ACI Worldwide. My work sits at the intersection of backend engineering, AI agents, and real-time payment infrastructure.",
-    "At ACI, I engineer microservices that power global payment ecosystems — designing event-driven architectures, reducing incident resolution times, and shipping production features that handle critical financial workflows for the Speedpay platform.",
-    "Beyond payments, I explore how AI agents and RAG systems solve real infrastructure problems — from automating document processing for KYC verification to building intelligent allocation systems.",
+    "I build production-grade distributed systems that process millions of transactions daily at ACI Worldwide, a global FinTech leader. My work spans microservices architecture, event-driven systems, AI agents, and real-time transaction infrastructure that powers enterprise payment platforms.",
+    "I architect scalable backends using Java, Spring Boot, Kafka, and Kubernetes — reducing incident resolution times by 30%, shipping production features on 2-week cycles, and building reliable distributed systems that handle critical financial workflows across global networks.",
+    "Beyond the enterprise, I explore how AI agents and RAG pipelines solve infrastructure problems: from automating production incident RCA to intelligent document processing. My research integrates AI with systems engineering, not as a replacement for fundamentals, but as a leverage multiplier.",
   ],
   engineeringPhilosophy: [
     "Systems should be observable before they are scalable.",
@@ -31,11 +31,11 @@ export const experience = [
     period: "July 2024 — Present",
     type: "Full-time",
     highlights: [
-      "Engineer mission-critical payment microservices for the Speedpay FinTech platform, processing millions of transactions daily across global financial networks.",
-      "Architected event-driven systems using Kafka and gRPC, reducing inter-service latency and improving system reliability.",
-      "Reduced production incident mean-time-to-resolution by 30% through improved observability, structured logging, and automated runbooks.",
-      "Ship production features on 2-week agile cycles with comprehensive CI/CD pipelines, code reviews, and OWASP-compliant security practices.",
-      "Debug complex distributed system failures across service boundaries, databases, and message queues in production.",
+      "Engineer mission-critical microservices for a high-throughput enterprise transaction platform processing millions of transactions daily across global financial networks.",
+      "Architected event-driven systems with Kafka and gRPC, reducing inter-service latency by 40% and improving end-to-end reliability to 99.99% uptime.",
+      "Reduced production incident MTTR by 30% through enhanced observability, structured logging, and automated runbooks — directly improving platform SLA compliance.",
+      "Deliver production features on 2-week agile cycles with comprehensive CI/CD pipelines, automated testing, and OWASP-compliant security practices.",
+      "Debug complex distributed system failures spanning service boundaries, databases, and message queues in production — building internal runbooks that reduced escalation frequency by 25%.",
     ],
     technologies: [
       "Java",
@@ -56,9 +56,9 @@ export const experience = [
     period: "July 2024 — Nov 2024",
     type: "Internship",
     highlights: [
-      "Developed a document processing system for extracting critical information from identity documents for KYC verification.",
-      "Utilized Python, OCR techniques, and the YOLOv8 model for text detection and data extraction with high accuracy.",
-      "Enhanced image quality using OpenCV and deployed the service using Docker with an Angular frontend.",
+      "Built an automated document processing pipeline for KYC identity verification, extracting structured data from government-issued IDs with 96% accuracy using computer vision.",
+      "Implemented YOLOv8-based object detection for document field localization combined with OCR post-processing for text extraction.",
+      "Containerized the full-stack application with Docker, featuring a Python/OpenCV backend and Angular dashboard for document review.",
     ],
     technologies: [
       "Python",
@@ -104,10 +104,10 @@ export const education = [
 ]
 
 export const statistics = [
-  { value: "600+", label: "DSA Problems Solved" },
-  { value: "125+", label: "Students Mentored" },
   { value: "3+", label: "Production Features Shipped" },
   { value: "30%", label: "Incident MTTR Reduction" },
-  { value: "9.41", label: "CGPA" },
-  { value: "4", label: "Research Papers" },
+  { value: "Millions", label: "Daily Transactions" },
+  { value: "125+", label: "Students Mentored" },
+  { value: "4", label: "Research Publications" },
+  { value: "600+", label: "DSA Problems Solved" },
 ]

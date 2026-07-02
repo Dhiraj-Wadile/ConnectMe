@@ -18,10 +18,10 @@ export function Publications() {
 
           <AnimatedContent delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-              Publications
+              Research &amp; Publications
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
-              Research papers at the intersection of AI, distributed systems, and payment infrastructure.
+              Peer-reviewed research at the intersection of AI, distributed systems, and inclusive technology.
             </p>
           </AnimatedContent>
 

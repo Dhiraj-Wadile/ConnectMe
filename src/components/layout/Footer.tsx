@@ -17,7 +17,7 @@ export function Footer() {
               DW<span className="text-accent">.</span>
             </a>
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              Building production systems that scale.
+              Building scalable backend systems, distributed applications, and AI-powered solutions.
             </p>
           </div>
 

@@ -22,9 +22,12 @@ export function Experience() {
           </AnimatedContent>
 
           <AnimatedContent delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-              Production Engineering
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              Experience
             </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
+              Building and scaling distributed systems that handle millions of financial transactions daily.
+            </p>
           </AnimatedContent>
 
           <div className="relative">

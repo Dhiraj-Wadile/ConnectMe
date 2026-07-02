@@ -27,7 +27,7 @@ export function Achievements() {
 
           <AnimatedContent delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-              Milestones
+              Achievements &amp; Milestones
             </h2>
           </AnimatedContent>
 

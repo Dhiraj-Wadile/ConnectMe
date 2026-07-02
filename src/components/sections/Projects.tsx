@@ -206,7 +206,7 @@ export function Projects() {
 
           <AnimatedContent delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-              Featured Work
+              Projects
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
               Production systems I&apos;ve designed and built. Each project represents a real problem solved with clean architecture and measurable impact.

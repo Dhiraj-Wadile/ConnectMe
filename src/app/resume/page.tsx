@@ -52,9 +52,9 @@ export default function ResumePage() {
         <div className="mb-8">
           <h2 className="text-lg font-bold mb-3 pb-1 border-b-2 border-black">About</h2>
           <p className="text-sm leading-relaxed text-gray-700">
-            Associate Software Engineer at ACI Worldwide contributing to the Speedpay FinTech payment platform.
-            Building and optimizing both frontend and backend features, analyzing production issues, and enhancing
-            system reliability. Experienced in AI-driven solutions, document processing for KYC verification,
+            Associate Software Engineer building and optimizing distributed microservices for a high-volume enterprise platform.
+            Design and develop both frontend and backend features, analyze production issues, and enhance
+            system reliability across global financial networks. Experienced in AI-driven solutions, document processing for KYC verification,
             and intelligent allocation systems. B.E. in Information Technology from PICT with 9.4 CGPA.
           </p>
         </div>
@@ -66,14 +66,14 @@ export default function ResumePage() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="font-semibold">Associate Software Engineer</h3>
-                <p className="text-sm text-gray-600">ACI Worldwide — Pune, India</p>
+                <p className="text-sm text-gray-600">Leading FinTech Company — Pune, India</p>
               </div>
               <span className="text-xs text-gray-500 whitespace-nowrap">July 2024 — Present</span>
             </div>
             <ul className="mt-2 space-y-1">
               <li className="text-sm text-gray-700 pl-4 relative">
                 <span className="absolute left-0 top-1.5 h-1 w-1 rounded-full bg-gray-400" />
-                Contributed to the development of the Speedpay FinTech payment platform, enhancing digital payment workflows and processing millions of transactions.
+                Engineered mission-critical microservices for a high-throughput enterprise transaction platform, processing millions of transactions daily.
               </li>
               <li className="text-sm text-gray-700 pl-4 relative">
                 <span className="absolute left-0 top-1.5 h-1 w-1 rounded-full bg-gray-400" />

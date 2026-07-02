@@ -23,9 +23,12 @@ export function Leadership() {
           </AnimatedContent>
 
           <AnimatedContent delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-              Community & Leadership
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              Community &amp; Leadership
             </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
+              Mentoring, speaking, and organizing technical events for the engineering community.
+            </p>
           </AnimatedContent>
 
           <StaggerChildren className="space-y-6" staggerDelay={0.1}>

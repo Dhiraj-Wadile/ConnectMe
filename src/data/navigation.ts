@@ -8,8 +8,7 @@ export const navigation: NavItem[] = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Publications", href: "#publications" },
-  { label: "Freelance", href: "#freelance" },
+  { label: "Work With Me", href: "#freelance" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -17,7 +16,7 @@ export const achievements = [
   {
     title: "IEEE Research Publication",
     description:
-      "Published research papers on AI Agents, RAG systems, and event-driven payment architectures at IEEE conferences.",
+      "Published research papers on AI Agents, RAG systems, and event-driven architectures at IEEE conferences.",
     year: "2024-2025",
     icon: "award",
   },

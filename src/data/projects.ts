@@ -22,17 +22,17 @@ export const projects: Project[] = [
   {
     id: "empowertrace",
     title: "EmpowerTrace",
-    tagline: "AI-Powered Root Cause Analysis for Payment Failures",
+    tagline: "AI-Powered Root Cause Analysis for Production Failures",
     description:
-      "An intelligent agent system that automates payment failure RCA using RAG, reducing diagnosis time from hours to minutes.",
+      "An intelligent agent system that automates production failure RCA using RAG, reducing diagnosis time from hours to minutes.",
     problem:
-      "Payment failures in production generate thousands of log lines, stack traces, and system metrics. Engineers spend hours manually correlating data across disparate systems to determine root cause. This delays resolution, impacts SLAs, and increases operational costs.",
+      "Production failures generate thousands of log lines, stack traces, and system metrics. Engineers spend hours manually correlating data across disparate systems to determine root cause. This delays resolution, impacts SLAs, and increases operational costs.",
     solution:
       "Built a multi-agent AI system that ingests logs, metrics, and transaction data — then uses Retrieval-Augmented Generation to automatically correlate signals, identify root cause, and suggest remediation steps.",
     architecture: [
       "Multi-agent orchestration layer using LangChain4j",
       "RAG pipeline with Elasticsearch for vector storage and retrieval",
-      "gRPC-based communication between agents and payment systems",
+      "gRPC-based communication between agents and transaction systems",
       "Claude API integration for natural language reasoning",
       "Spring Boot microservice with reactive WebFlux",
       "Angular dashboard for interactive investigation",
@@ -50,17 +50,17 @@ export const projects: Project[] = [
       "Kafka",
     ],
     challenges: [
-      "Designing agent orchestration that respects payment system security boundaries",
+      "Designing agent orchestration that respects transaction system security boundaries",
       "Achieving sub-100ms retrieval latency for real-time RCA queries",
       "Building reliable context windows from noisy production logs",
     ],
     results: [
       "Reduced mean-time-to-diagnosis from 45 minutes to under 5 minutes",
       "Achieved 87% accuracy in root cause identification across 500+ historical incidents",
-      "Automated 70% of Level 2 support tickets related to payment failures",
+      "Automated 70% of Level 2 support tickets related to production failures",
     ],
     impact: [
-      "Directly improved payment infrastructure reliability and uptime",
+      "Directly improved enterprise infrastructure reliability and uptime",
       "Freed senior engineers from repetitive debugging to focus on architecture",
       "Set foundation for AI-assisted incident management across the organization",
     ],

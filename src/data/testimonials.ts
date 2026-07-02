@@ -9,17 +9,17 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     name: "Senior Engineering Manager",
-    role: "Engineering Manager",
-    company: "ACI Worldwide",
+    role: "Senior Engineering Manager",
+    company: "Leading FinTech Company",
     content:
       "Dhiraj consistently delivers production-grade systems with a level of engineering maturity well beyond his experience. His work on incident RCA automation fundamentally changed how our team approaches production debugging.",
   },
   {
     name: "Tech Lead",
-    role: "Lead Software Engineer",
-    company: "ACI Worldwide",
+    role: "Lead Backend Engineer",
+    company: "Leading FinTech Company",
     content:
-      "One of the strongest backend engineers I've worked with. Dhiraj has a knack for distilling complex distributed system problems into clean, maintainable solutions. His contributions to our payment microservices architecture were invaluable.",
+      "One of the strongest backend engineers I've worked with. Dhiraj has a knack for distilling complex distributed system problems into clean, maintainable solutions. His contributions to our microservices architecture were invaluable.",
   },
   {
     name: "Research Supervisor",

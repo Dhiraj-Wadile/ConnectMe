@@ -43,9 +43,12 @@ export function Skills() {
           </AnimatedContent>
 
           <AnimatedContent delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-              Engineering Toolkit
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              Skills &amp; Expertise
             </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
+              Full-stack engineering with deep specialization in backend systems, distributed architecture, and AI integration.
+            </p>
           </AnimatedContent>
 
           <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 gap-4" staggerDelay={0.05}>

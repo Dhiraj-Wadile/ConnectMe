@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, FileDown } from "lucide-react"
@@ -14,7 +14,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
-
+  const navRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -29,6 +29,7 @@ export function Header() {
       }
     }
     window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll()
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
@@ -51,7 +52,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
       )}
     >
@@ -60,19 +61,20 @@ export function Header() {
           href="/"
           className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
-          DW<span className="text-accent">.</span>
+          Dhiraj<span className="text-accent">.</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav ref={navRef} className="hidden md:flex items-center gap-1 relative">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              data-section={item.href.slice(1)}
               className={cn(
-                "px-3 py-2 text-sm rounded-full transition-all duration-200",
+                "relative px-3 py-2 text-sm rounded-full transition-all duration-200",
                 activeSection === item.href.slice(1)
-                  ? "text-foreground bg-muted/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/5"
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {item.label}
@@ -82,12 +84,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Button
-            variant="outline"
-            size="sm"
-            className="hidden sm:inline-flex gap-2"
-            asChild
-          >
+          <Button variant="outline" size="sm" className="hidden sm:inline-flex gap-2" asChild>
             <Link href={personalInfo.resumeUrl}>
               <FileDown className="h-3.5 w-3.5" />
               Resume
@@ -97,6 +94,7 @@ export function Header() {
             className="flex md:hidden h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-muted/10 transition-colors"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileOpen}
           >
             {isMobileOpen ? (
               <X className="h-4 w-4" />
@@ -123,7 +121,12 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMobile}
-                  className="px-3 py-2.5 text-sm rounded-lg hover:bg-muted/10 transition-colors"
+                  className={cn(
+                    "px-3 py-2.5 text-sm rounded-lg transition-colors",
+                    activeSection === item.href.slice(1)
+                      ? "text-foreground bg-muted/10 font-medium"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/5"
+                  )}
                 >
                   {item.label}
                 </Link>

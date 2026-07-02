@@ -6,23 +6,23 @@ import { AnimatedContent } from "@/components/shared/AnimatedSection"
 
 const blogPosts = [
   {
-    title: "Building AI Agents for Production: Lessons from Payment Infrastructure",
+    title: "Building AI Agents for Production: Lessons from Enterprise Infrastructure",
     description:
-      "What I learned building a multi-agent RCA system for payment failures — and why agent boundaries matter more than model choice.",
+      "What I learned building a multi-agent RCA system for distributed system failures — and why agent boundaries matter more than model choice.",
     date: "Coming Soon",
     slug: "ai-agents-production",
   },
   {
-    title: "Event-Driven Architecture in Payment Systems",
+    title: "Event-Driven Architecture for High-Throughput Systems",
     description:
-      "How we process millions of transactions daily using Kafka, gRPC, and event sourcing patterns.",
+      "How to process millions of transactions daily using Kafka, gRPC, and event sourcing patterns.",
     date: "Coming Soon",
     slug: "event-driven-payments",
   },
   {
     title: "Why Observability Beats Testing for Distributed Systems",
     description:
-      "The debugging strategies that reduced our incident MTTR by 30% in production payment systems.",
+      "The debugging strategies that reduced our incident MTTR by 30% in production distributed systems.",
     date: "Coming Soon",
     slug: "observability-distributed-systems",
   },
@@ -41,7 +41,7 @@ export function Blog() {
 
           <AnimatedContent delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-              Writing
+              Blog &amp; Writing
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-12 text-balance">
               Thoughts on backend engineering, AI systems, distributed architecture, and building for production.
