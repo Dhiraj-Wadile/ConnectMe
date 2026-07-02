@@ -17,7 +17,8 @@ export function Contact() {
     const email = formData.get("email") as string
     const message = formData.get("message") as string
 
-    window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent("Contact from " + name)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`
+    const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent("Contact from " + name)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`
+    window.open(mailtoUrl, "_blank")
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 3000)
   }
